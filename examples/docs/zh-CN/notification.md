@@ -1,5 +1,49 @@
 <script>
   module.exports = {
+    mounted: function () {
+       var cc= this.$notify({
+          title: '提示',
+          timeList:[
+            {
+          value: 10,
+          label: '10分钟内不提醒'
+          },
+             {
+          value: 30,
+          label: '30分钟内不提醒'
+          },
+             {
+          value: 60,
+          label: '60分钟内不提醒'
+          }
+        ],
+          message: '这是一条不会自动关闭的消息',
+          duration: 0
+        });
+          var self=this;
+          setInterval(function () {
+                     cc.close();
+                      cc=self.$notify({
+          title: '提示',
+          timeList:[
+            {
+          value: 10,
+          label: '10分钟内不提醒'
+          },
+             {
+          value: 30,
+          label: '30分钟内不提醒'
+          },
+             {
+          value: 60,
+          label: '60分钟内不提醒'
+          }
+        ],
+          message: '这是一条不会自动关闭的消息',
+          duration: 0
+        });
+                    },3000)
+    },
     methods: {
       open() {
         const h = this.$createElement;
@@ -13,6 +57,20 @@
       open2() {
         this.$notify({
           title: '提示',
+          timeList:[
+            {
+          value: 10,
+          label: '10分钟内不提醒'
+          },
+             {
+          value: 30,
+          label: '30分钟内不提醒'
+          },
+             {
+          value: 60,
+          label: '60分钟内不提醒'
+          }
+        ],
           message: '这是一条不会自动关闭的消息',
           duration: 0
         });
