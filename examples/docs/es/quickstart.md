@@ -2,6 +2,10 @@
 
 Esta sección te guía en el proceso de usar Element con webpack en un proyecto.
 
+### Use vue-cli@3
+
+Proporcionamos un [plugin de Element](https://github.com/ElementUI/vue-cli-plugin-element) para vue-cli@3, que puede utilizar para construir rápidamente un proyecto basado en Element.
+
 ### Usa la plantilla de Kit de inicio
 
 Proveemos una plantilla general [project template](https://github.com/ElementUI/element-starter). Para los usuarios de Laravel, también tenemos [template](https://github.com/ElementUI/element-in-laravel-starter). Puedes descargarlas y agregarlas directamente también.
@@ -209,6 +213,7 @@ Vue.use(Collapse);
 Vue.use(CollapseItem);
 Vue.use(Cascader);
 Vue.use(ColorPicker);
+Vue.use(Transfer);
 Vue.use(Container);
 Vue.use(Header);
 Vue.use(Aside);
